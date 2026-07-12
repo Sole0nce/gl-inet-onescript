@@ -30,7 +30,6 @@
 </a>
 
 ## 🚀 快速上手 
-⚠️ (MT3000/6000 openwrt 25 暂未适配 待开发)
 
 ### 一键安装 (推荐)
 
@@ -41,37 +40,35 @@ sh -c "$(curl -fsSL https://cafe.cpolar.cn/wkdaily/gl/raw/branch/main/main.sh)"
 ```
 
 主脚本支持自动检测以下机型：
-- GL-iNet BE-6500 / BE-9300 / BE-3600
-- GL-iNet MT-5000 / MT-3600BE
-- GL-iNet Mudi 7 (GL-E5800)
-- GL-iNet MT-2500A / MT-3000 / MT-6000
-- OP24 固件专用脚本
+- GL-iNet BE-6500 / BE-9300 / BE-3600 Luci-23
+- GL-iNet MT-5000 / MT-3600BE Luci-21
+- GL-iNet Mudi 7 (GL-E5800) 
+- GL-iNet MT-2500A / MT-3000 / MT-6000 OP21
+- OP24 MT3000/6000专用脚本 24.10.4
+- OP25 MT3000/6000专用脚本 25.12.5
 
 ### 单独机型脚本
 
 如需单独运行某机型脚本，可使用以下命令：
-####  MT3000脚本 ❤️ Wi-Fi 6
+####  MT3000脚本 ❤️ Wi-Fi 6 出厂默认系统（luci 21 内核5.4）
 ```bash
 sh -c "$(curl -fsSL https://cafe.cpolar.cn/wkdaily/gl/raw/branch/main/gl-inet.sh)"
 
 ```
 
-#### 新增 兼容原厂【op24固件】的脚本 (MT3000/6000) Wi-Fi 6 luci 24.10
-> 如果是【MT3000 原厂4.8.3-op24 固件】 你可以先替换为阿里云软件源 再执行脚本 这样在国内访问会快很多<br>
-> 进入luci界面，系统——软件包——配置OPKG 将最后的 /etc/opkg/distfeeds.conf 下面的文本框替换为如下 阿里云的软件源
-```bash
-src/gz core https://fw.gl-inet.cn/releases/v24.x/24.10.4/mediatek/filogic
-src/gz base https://mirrors.aliyun.com/openwrt/releases/24.10.4/packages/aarch64_cortex-a53/base
-src/gz luci https://mirrors.aliyun.com/openwrt/releases/24.10.4/packages/aarch64_cortex-a53/luci
-src/gz packages https://mirrors.aliyun.com/openwrt/releases/24.10.4/packages/aarch64_cortex-a53/packages
-src/gz routing https://mirrors.aliyun.com/openwrt/releases/24.10.4/packages/aarch64_cortex-a53/routing
-src/gz telephony https://mirrors.aliyun.com/openwrt/releases/24.10.4/packages/aarch64_cortex-a53/telephony
-```
-#### 然后再执行脚本 gl-inet-op24.sh 换源后这样速度就快很多 （luci 24.10）
+#### 新增 兼容原厂【op24固件】的脚本 (MT3000/6000) Wi-Fi 6 luci 24.10.4 （luci 24 内核6.6）
+
 ```bash
 sh -c "$(curl -fsSL https://cafe.cpolar.cn/wkdaily/gl/raw/branch/main/gl-inet-op24.sh)"
 
 ```
+
+#### 新增 兼容原厂【op25固件】的脚本 (MT3000/6000) Wi-Fi 6 luci 25.12.5 （内核6.12）
+```bash
+sh -c "$(curl -fsSL https://cafe.cpolar.cn/wkdaily/gl/raw/branch/main/gl-inet-op25.sh)"
+
+```
+
 
 #### 新增 BE6500脚本 (GL-BE6500) ❤️ Wi-Fi 7 (同BE9300通用)
 ```bash
