@@ -45,7 +45,7 @@ sh -c "$(curl -fsSL https://cafe.cpolar.cn/wkdaily/gl/raw/branch/main/main.sh)"
 - GL-iNet Mudi 7 (GL-E5800) 
 - GL-iNet MT-2500A / MT-3000 / MT-6000 OP21
 - OP24 MT3000/6000专用脚本 24.10.4
-- OP25 MT3000/6000专用脚本 25.12.5
+- OP25 MT3600BE/MT3000/6000专用脚本 25.12.5
 
 ### 单独机型脚本
 
